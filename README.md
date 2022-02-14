@@ -40,9 +40,9 @@ First, make sure that the file *io/pacman.json* has the correct io group, PACMAN
 
 Create the hydra network and test all UART connections on the tiles (do this for one tile at a time):
 
-'''
+```
 $ python3 map_uart_links_qc.py --pacman_tile X --tile_id XXX
-'''
+```
 
 where X is the tile number of the tile under test, and XXX us the unique specifier for the tile (invariant in case tiles are moved around). 
 
