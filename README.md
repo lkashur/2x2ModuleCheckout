@@ -113,4 +113,11 @@ Convert the raw binary file to the hdf5 file format with the packet dataset:
 $ python3 larpix-control/scripts/convert_rawhdf5_to_hdf5.py
 --input_filename <raw file>.h5 --output_filename <packet fle>.h5
 ```
-Plot the mean ADC, ADC RMS, and trigger rate to verify uniformity.
+Plot the mean ADC, ADC RMS, and trigger rate to verify uniformity.  For example:
+  ```
+  python3 plot_anode.py --datalog_file <path to datalog file> --geometry_file multi_tile_layout-2.2.16-dict.json --channel_id_packet_rate --anode
+  ```
+The plot_anode script can also be used to view which channels on each TPC have been disabled:
+  ```
+  python3 plot_anode.py --asic_config_dir <path to asic config dir> --geometry_file multi_tile_layout-2.2.16-dict.json --channel_mask --anode
+  ```
